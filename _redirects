@@ -127,3 +127,7 @@
 /wp-content/uploads/2026/02/GoodDogRunningOrderFeb2026.pdf  /trials/docs/2026/02/GoodDogRunningOrderFeb2026.pdf  301
 /wp-content/uploads/2026/04/April-2026-Trial-Information.pdf  /trials/docs/2026/04/April-2026-Trial-Information.pdf  301
 /wp-content/uploads/2026/04/GoodDogTeamRunningOrder.pdf  /trials/docs/2026/04/GoodDogTeamRunningOrder.pdf  301
+
+# Maintenance docs live in the repo, not on the public site
+/GO-LIVE.md   /404.html   404
+/README.md    /404.html   404
