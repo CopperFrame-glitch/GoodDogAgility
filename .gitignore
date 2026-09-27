@@ -1,0 +1,13 @@
+# OS clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor scratch
+*.swp
+*~
+.vscode/
+.idea/
+
+# Local archives — the site is the repo, not a zip of it
+*.zip
