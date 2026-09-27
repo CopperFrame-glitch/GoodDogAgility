@@ -131,3 +131,11 @@
 # Maintenance docs live in the repo, not on the public site
 /GO-LIVE.md   /404.html   404
 /README.md    /404.html   404
+
+# Old WordPress (Yoast) sitemaps -> the current sitemap
+/sitemap_index.xml       /sitemap.xml   301
+/post-sitemap.xml        /sitemap.xml   301
+/page-sitemap.xml        /sitemap.xml   301
+/category-sitemap.xml    /sitemap.xml   301
+/author-sitemap.xml      /sitemap.xml   301
+/attachment-sitemap.xml  /sitemap.xml   301
