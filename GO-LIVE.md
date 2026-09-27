@@ -213,3 +213,24 @@ When you add a USDAA online entry link to a trial page, keep the login reminder 
 (USDAA's entry link only works for people already signed in):
 
     <span class="docnote">Log in to your USDAA account first, or the link won't open the entry form.</span>
+
+## Analytics
+
+Google Analytics 4 is installed on every page. Property: **gooddog.org**,
+Measurement ID **G-TG3ZJYLW1J**. The tag sits just above `</head>`.
+
+Any new page needs the same block, or it won't be counted:
+
+```html
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TG3ZJYLW1J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TG3ZJYLW1J');
+</script>
+```
+
+To check a page is tagged, search it for `G-TG3ZJYLW1J`. To see live traffic,
+open Analytics and go to **Reports → Realtime**.
