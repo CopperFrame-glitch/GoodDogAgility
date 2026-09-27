@@ -234,3 +234,25 @@ Any new page needs the same block, or it won't be counted:
 
 To check a page is tagged, search it for `G-TG3ZJYLW1J`. To see live traffic,
 open Analytics and go to **Reports → Realtime**.
+
+## Resources section (added September 2026)
+
+`resources.html` is the hub. The volunteer guides (`scribe-instructions.html`,
+`timer-instructions.html`, `gate-steward-instructions.html`) and
+`engagement-games.html` are HTML versions of documents the club had only ever
+published as PDFs. The PDFs live in `resources/docs/` and are linked from each
+page as the printable version for ringside.
+
+These were restored from the WordPress backup after the migration left them
+404-ing. They had been earning around 500 search impressions a quarter, and the
+old URLs now 301 to the new locations, so keep those redirects in `_redirects`.
+
+**If you edit a guide, change the HTML page and the PDF together**, or the
+printed copy at the ring will disagree with the website.
+
+**Authorship, worth knowing before reusing any of it:** the scribe, timer and
+gate steward guides were written by Maureen, and the engagement games handout by
+Barbara, so they are the club's own. The weave pole plans are by Mike Hughes.
+*Preparing For Your First USDAA Trial* is **not** ours: it was produced by The
+Bay Team together with USDAA. It is linked as a credited PDF on
+`resources.html` and should not be rewritten as club content.

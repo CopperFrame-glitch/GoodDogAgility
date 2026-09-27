@@ -139,3 +139,26 @@
 /category-sitemap.xml    /sitemap.xml   301
 /author-sitemap.xml      /sitemap.xml   301
 /attachment-sitemap.xml  /sitemap.xml   301
+
+# WordPress-era section URLs (trailing slash) still earning impressions
+/classes/                          /classes.html            301
+/resources/                        /resources.html          301
+/about/                            /about.html              301
+/faq/                              /faq.html                301
+/membership/                       /about.html              301
+/registration/                     /register.html           301
+/finance/                          /about.html              301
+/doggiebytes/                      /doggie-bytes.html       301
+/dog-aggression-policy/            /policies.html           301
+/what-to-bring-with-you-to-class/  /what-to-expect.html     301
+
+# Orphaned resource documents, restored under /resources/docs/
+/wp-content/uploads/2021/10/Scribe-Cheat-Sheet.pdf          /resources/docs/scribe-cheat-sheet.pdf          301
+/wp-content/uploads/2021/10/Laminate-Scribe-Instructions.pdf /resources/docs/scribe-instructions.pdf        301
+/wp-content/uploads/2021/10/Laminate-Timer-Instructions.pdf  /resources/docs/timer-instructions.pdf         301
+/wp-content/uploads/2021/11/Gate-Steward-Duties.pdf          /resources/docs/gate-steward-duties.pdf        301
+/wp-content/uploads/2021/07/WeavePole.pdf                    /resources/docs/weave-pole-plans.pdf           301
+/secured/EngagementGames.pdf                                 /resources/docs/engagement-games.pdf           301
+/forms/PREPARING%20FOR%20YOUR%20FIRST%20USDAA%20TRIAL_ver5.pdf /resources/docs/preparing-for-your-first-usdaa-trial.pdf 301
+/forms/*                                                     /resources/                                    301
+/secured/*                                                   /resources/                                    301

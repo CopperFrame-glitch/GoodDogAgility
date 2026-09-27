@@ -364,3 +364,15 @@ h3.yr:first-of-type{margin-top:0}
 .formlist{margin:0 0 1.4rem;padding-left:1.2rem}
 .formlist li{margin-bottom:.5rem}
 .formwrap a:not(.btn){color:var(--terra);font-weight:700}
+
+/* ---- resources hub + guide pages ---- */
+.reslist{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}
+.rescard{background:#fff;border:1px solid var(--rule);border-left:4px solid var(--sun);border-radius:3px;padding:1.4rem 1.5rem}
+.rescard h3{font-size:1.15rem;margin-bottom:.5rem}
+.rescard h3 a{text-decoration:none}
+.rescard h3 a:hover{color:var(--clay)}
+.rescard p{font-size:.98rem;line-height:1.55;margin:0 0 .6rem;font-weight:400}
+.rescard .resmeta{font-size:.85rem;font-weight:700;margin:0}
+.rescard .resmeta a{color:var(--terra)}
+.dlrow{display:flex;flex-wrap:wrap;align-items:center;gap:.9rem;margin:1.6rem 0 2rem}
+.dlrow span{font-size:.9rem;color:rgba(61,22,7,.7);font-weight:400}
