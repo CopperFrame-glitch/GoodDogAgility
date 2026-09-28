@@ -108,7 +108,36 @@ new lookup is working, then it can be retired.
 
 ---
 
-## Registration: closed for Fall 2026 (September 27, 2026)
+## Registration: Beginners reopened (September 28, 2026)
+
+Final Fall 2026 headcounts came in at Beginners 10, Advanced Beginners 15,
+Intermediate 11, Handlers 7. Beginners was well under its 20-team limit, so it was
+reopened mid-session; the other three stay closed.
+
+Current state:
+
+- **Jotform `262375882204157`** — all three class-selection questions (credit card,
+  check, and credits paths) were narrowed so **Beginners is the only selectable class**
+  at $250. The other three levels were removed as options. The stale
+  `bytes_balance.php` link inside the form now points at `doggie-bytes.html`.
+  A new form is created each session, so nothing needs restoring here for February.
+- **Ticker, every page** — back to `<div class="ticker">` reading "Beginners is open".
+- **`register.html`** — the Jotform embed is back, `<h1>Register for Beginners</h1>`,
+  Course schema is `InStock` and now describes the Beginners class specifically with
+  start and end dates. A waiting-list section covers the other three levels.
+- **`beginners.html`** — `<div class="opennotice">` replaces the full notice, hero
+  button is `Register` again.
+- **`index.html` / `classes.html`** — Beginners card and schedule row carry
+  `<span class="openflag">Open</span>`; the other three keep `fullflag` and `rowfull`.
+  Price-box buttons read "Register for Beginners".
+- **Nav and footer** — back to "Register".
+
+To close Beginners again, reverse the above: `ticker` back to `ticker closed`, swap
+`openflag` for `fullflag` and restore `rowfull` on the Beginners row, put the
+`formfull` notice back on `register.html` with the embed removed, set Course
+`availability` to `SoldOut`, and change the nav and footer back to "Waiting list".
+
+## Registration: closed for Fall 2026 (September 27, 2026, superseded above)
 
 All four levels are full and the Fall session has started, so registration is closed
 sitewide. Team limits: Beginners 20, Advanced Beginners 16, Intermediate 12, Handlers 6.
