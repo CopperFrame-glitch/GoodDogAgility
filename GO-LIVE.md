@@ -110,10 +110,11 @@ new lookup is working, then it can be retired.
 
 ## Registration: closed sitewide (October 3, 2026)
 
-Registration is closed for all four levels. Beginners had been reopened mid-session on
-September 28; it was closed again on October 3 because the session is several weeks in,
-not because it filled. Headcounts for the record: Beginners 10 (20-team limit),
-Advanced Beginners 15, Intermediate 11, Handlers 7.
+Registration is closed for all four levels and the Jotform has been disabled in the
+Jotform dashboard. Beginners was reopened mid-session on September 28 and closed again
+on October 3. All four levels are presented as full on the site. Headcounts recorded
+before Beginners reopened: Beginners 10 (20-team limit), Advanced Beginners 15,
+Intermediate 11, Handlers 7 (cap 6).
 
 Current state:
 
@@ -122,17 +123,16 @@ Current state:
   The page and URL stay live so search traffic and old links land somewhere useful.
 - **Ticker, every page** — `<div class="ticker closed">` reading "Registration closed /
   Fall 2026 classes are under way".
-- **`beginners.html`** — `<div class="fullnotice">` says registration is closed, hero
-  button points at the waiting list. Note the wording says closed, not full, because
-  Beginners did not fill.
-- **`index.html` / `classes.html`** — Beginners carries `<span class="fullflag">Closed</span>`
-  and `rowfull`; the other three keep "Full". Price-box buttons read "Join the waiting list".
+- **`beginners.html`** — `<div class="fullnotice">` reads "Beginners is full for Fall
+  2026", hero button points at the waiting list.
+- **`index.html` / `classes.html`** — all four levels carry `<span class="fullflag">Full</span>`
+  and `rowfull`. Price-box buttons read "Join the waiting list".
 - **Nav and footer** — "Waiting list".
-- **Jotform `262375882204157`** — still narrowed to Beginners only, and still ENABLED
-  in Jotform. Nothing on the site links to it, but the direct link would accept a
-  submission until the form is switched off in the Jotform dashboard
-  (form settings, Form Status, set to Disabled). A new form is built each session, so
-  this one does not need restoring for February.
+- **Jotform `262375882204157`** — DISABLED in the Jotform dashboard as of October 3, and
+  unlinked from every page. It is still narrowed to Beginners only from the September 28
+  reopening. A new form is built each session, so this one does not need restoring for
+  February; build the February form fresh and add the required "how did you hear about
+  us?" question to it.
 
 ### Reopening a single class mid-session
 
