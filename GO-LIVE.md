@@ -108,7 +108,40 @@ new lookup is working, then it can be retired.
 
 ---
 
-## Registration: Beginners reopened (September 28, 2026)
+## Registration: closed sitewide (October 3, 2026)
+
+Registration is closed for all four levels. Beginners had been reopened mid-session on
+September 28; it was closed again on October 3 because the session is several weeks in,
+not because it filled. Headcounts for the record: Beginners 10 (20-team limit),
+Advanced Beginners 15, Intermediate 11, Handlers 7.
+
+Current state:
+
+- **`register.html`** — the Jotform embed is removed, `<h1>Registration is closed</h1>`,
+  Course schema back to `SoldOut`, waiting-list and "while you wait" sections in place.
+  The page and URL stay live so search traffic and old links land somewhere useful.
+- **Ticker, every page** — `<div class="ticker closed">` reading "Registration closed /
+  Fall 2026 classes are under way".
+- **`beginners.html`** — `<div class="fullnotice">` says registration is closed, hero
+  button points at the waiting list. Note the wording says closed, not full, because
+  Beginners did not fill.
+- **`index.html` / `classes.html`** — Beginners carries `<span class="fullflag">Closed</span>`
+  and `rowfull`; the other three keep "Full". Price-box buttons read "Join the waiting list".
+- **Nav and footer** — "Waiting list".
+- **Jotform `262375882204157`** — still narrowed to Beginners only, and still ENABLED
+  in Jotform. Nothing on the site links to it, but the direct link would accept a
+  submission until the form is switched off in the Jotform dashboard
+  (form settings, Form Status, set to Disabled). A new form is built each session, so
+  this one does not need restoring for February.
+
+### Reopening a single class mid-session
+
+The September 28 commit (`8e85009`) is the worked example: open ticker, `openflag` on
+that class only in `index.html` and `classes.html`, `opennotice` on the class page,
+embed restored on `register.html` with `InStock` and a class-specific Course schema, and
+the Jotform narrowed so only that class is selectable. Reverse of this closure.
+
+## Registration: Beginners reopened (September 28, 2026, superseded above)
 
 Final Fall 2026 headcounts came in at Beginners 10, Advanced Beginners 15,
 Intermediate 11, Handlers 7. Beginners was well under its 20-team limit, so it was
