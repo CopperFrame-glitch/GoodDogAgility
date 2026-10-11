@@ -384,3 +384,33 @@ h3.yr:first-of-type{margin-top:0}
 .opennotice{background:var(--sand);border:2px solid var(--sun);border-radius:3px;padding:1.3rem 1.6rem;margin-bottom:2.2rem;font-size:1.05rem}
 .opennotice strong{display:block;font-family:var(--display);font-size:1.25rem;color:var(--terra);margin-bottom:.4rem}
 .opennotice a{color:var(--terra);font-weight:900}
+
+/* ---- Club Policies page ---- */
+.toc{background:#fff;border:1px solid var(--rule);border-radius:3px;padding:1.3rem 1.6rem;margin:0 0 2.6rem}
+.toc-h{font-size:.7rem!important;font-weight:900!important;letter-spacing:.16em;text-transform:uppercase;color:var(--clay);margin:0 0 .5rem!important}
+.toc ol{margin:0;padding-left:1.3rem}
+.toc li{margin-bottom:.25rem}
+.prose ol.rules{padding-left:1.3rem;margin:0 0 1.4rem}
+.prose ol.rules li{margin-bottom:.7rem;font-weight:400}
+h2.sub[id]{scroll-margin-top:110px}
+h3.step{font-family:var(--display);font-size:1.2rem;margin:2rem 0 .6rem;color:var(--terra)}
+.callout{background:var(--sand);border-left:4px solid var(--clay);border-radius:2px;padding:1.1rem 1.4rem;margin:1.4rem 0 1.6rem}
+.callout p{margin:0!important}
+.callout .callout-h{font-family:var(--display);font-weight:700;font-size:1.15rem;color:var(--terra);margin-bottom:.35rem!important}
+.docbox{background:#fff;border:1px solid var(--rule);border-radius:3px;padding:1.4rem 1.6rem;margin:1.6rem 0 1.8rem}
+.docbox p{margin:0!important}
+.docbox .docbox-h{font-family:var(--display);font-weight:700;font-size:1.2rem}
+.docbox .docbox-meta{font-size:.9rem;color:var(--tan);margin:.2rem 0 1rem!important}
+.prose .docbox a.btn{color:var(--terra);text-decoration:none}
+.legal-warn{font-weight:900!important;letter-spacing:.04em;text-transform:uppercase;font-size:.88rem;color:var(--clay)}
+.tablewrap{max-width:68ch;margin:0 0 2.6rem}
+table.equip td:first-child{width:34%;padding-right:1rem}
+table.equip td:first-child span{display:block;font-family:var(--body);font-size:.85rem;font-weight:400;color:var(--tan);margin-top:.15rem}
+table.equip td+td{padding-left:0;font-size:1rem;line-height:1.55}
+@media(max-width:600px){
+  table.equip,table.equip tbody,table.equip tr,table.equip td{display:block;width:100%!important}
+  table.equip thead{display:none}
+  table.equip tr{border-bottom:1px solid var(--rule);padding:.9rem 0}
+  table.equip td{border:0!important;padding:0!important}
+  table.equip td:first-child{margin-bottom:.3rem}
+}
