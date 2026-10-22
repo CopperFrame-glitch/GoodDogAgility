@@ -38,6 +38,22 @@
   gtag('js', new Date());
   gtag('config', 'G-TG3ZJYLW1J');
 </script>
+<script>(function(){
+var THANKS = new RegExp("^$never$");
+function send(n, p){ if (typeof gtag === 'function') { p = p || {}; p.page_path = location.pathname; gtag('event', n, p); } }
+document.addEventListener('click', function(e){
+var a = e.target && e.target.closest ? e.target.closest('a[href]') : null; if (!a) return;
+var h = a.getAttribute('href') || '', t = (a.textContent || '').trim().slice(0, 80);
+if (h.indexOf('tel:') === 0) send('phone_click', {link_url: h, link_text: t});
+else if (h.indexOf('mailto:') === 0) send('email_click', {link_url: h, link_text: t});
+else if (/portal\.thelistingbees\.com|tonomo|calendar\.app\.google|calendar\.google\.com\/appointments|calendly/.test(h)) send('book_click', {link_url: h, link_text: t});
+}, true);
+document.addEventListener('submit', function(e){
+var f = e.target; if (!f || f.tagName !== 'FORM') return;
+send('lead_form_submit', {form_name: f.getAttribute('name') || f.getAttribute('id') || f.getAttribute('action') || 'form'});
+}, true);
+if (THANKS.test(location.pathname) && !/[?&]noevent/.test(location.search)) send('generate_lead', {});
+})();</script>
 </head>
 <body>
 <div class="ticker closed"><div class="wrap"><strong>Registration closed</strong><span>Fall 2026 classes are under way and all four levels are full &middot; <a href="register.html">Join the waiting list for February</a></span></div></div>
