@@ -1,0 +1,14 @@
+{
+  "name": "Good Dog Agility Club",
+  "short_name": "Good Dog Agility",
+  "description": "Dog agility classes and USDAA trials in Chandler, Arizona.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "theme_color": "#3D1607",
+  "background_color": "#FBF6EE",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
