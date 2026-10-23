@@ -268,8 +268,26 @@ Closing and move-up dates are in the `<dl class="facts">` block at the top of th
 
 ### Adding a new trial
 Copy the most recent upcoming trial page, rename it with the new date, and update the title,
-description, canonical URL, `<h1>`, facts, JSON-LD, the USDAA premium link, and the
-previous/next links at the bottom. Add it to `trials.html` and to `sitemap.xml`.
+description, canonical URL and `og:url`, `<h1>`, facts, JSON-LD (event and breadcrumb),
+the USDAA premium link, and the previous/next links at the bottom. Add it to `trials.html`
+and to `sitemap.xml`.
+
+## URLs, titles and icons (October 2026)
+
+- **Page addresses have no `.html`.** Canonical tags, `og:url`, JSON-LD and `sitemap.xml`
+  all use `https://gooddog.org/about`, never `/about.html` (the homepage is
+  `https://gooddog.org/`). Netlify serves both, and its Pretty URLs setting rewrites the
+  `about.html` links in the HTML to `/about` on deploy, so leave that setting on.
+- **`sitemap.xml`** has a `<lastmod>` date per page. When you change a page's content,
+  update its date there too (format `2026-10-23`).
+- **Titles** stay at 60 characters or fewer and **descriptions** at 155 or fewer, and
+  `og:title` / `og:description` must match them word for word.
+- **Icons:** `favicon.ico`, `favicon-32x32.png`, `apple-touch-icon.png`, `icon-192.png`,
+  `icon-512.png` and `site.webmanifest` live in the site root and are linked from every
+  page's `<head>` with root-relative paths (`/favicon.ico`). New pages need the same four
+  `<link>` lines; copy them from any existing page.
+- **`404.html`** uses root-relative links (`/classes`, `/images/...`) because Netlify
+  shows it at any depth, such as `/trials/old-page`. Keep it that way.
 
 When you add a USDAA online entry link to a trial page, keep the login reminder under it
 (USDAA's entry link only works for people already signed in):
