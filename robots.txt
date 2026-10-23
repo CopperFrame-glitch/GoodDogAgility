@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /GO-LIVE.md
-Disallow: /README.md
 
 Sitemap: https://gooddog.org/sitemap.xml
