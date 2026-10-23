@@ -399,20 +399,33 @@ table.equip td:first-child{margin-bottom:.3rem}
 </script>
 <script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","z1y6yrx39h");</script>
 <script>(function(){
-var THANKS = new RegExp("^$never$");
+var THANKS = /^\/thanks(\.html)?\/?$/;
+var CTA_EL = '.btn, .navcta, .tlink, .ticker a, .trialcallout a';
+var CTA_DEST = /^\/(contact|register|trials)(\.html)?\/?$|^\/trials\//;
 function send(n, p){ if (typeof gtag === 'function') { p = p || {}; p.page_path = location.pathname; gtag('event', n, p); } }
 document.addEventListener('click', function(e){
 var a = e.target && e.target.closest ? e.target.closest('a[href]') : null; if (!a) return;
 var h = a.getAttribute('href') || '', t = (a.textContent || '').trim().slice(0, 80);
 if (h.indexOf('tel:') === 0) send('phone_click', {link_url: h, link_text: t});
-else if (h.indexOf('mailto:') === 0) send('email_click', {link_url: h, link_text: t});
-else if (/portal\.thelistingbees\.com|tonomo|calendar\.app\.google|calendar\.google\.com\/appointments|calendly/.test(h)) send('book_click', {link_url: h, link_text: t});
+else if (h.indexOf('mailto:') === 0) { send('email_click', {link_url: h, link_text: t}); if (/subject=[^&]*waiting/i.test(h)) send('cta_click', {cta_label: t, cta_destination: h}); }
+else if (/calendar\.app\.google|calendar\.google\.com\/appointments|calendly/.test(h)) send('book_click', {link_url: h, link_text: t});
+else if (a.matches && a.matches(CTA_EL) && a.host === location.host && CTA_DEST.test(a.pathname)) send('cta_click', {cta_label: t, cta_destination: a.pathname.replace(/\.html$/, '')});
 }, true);
 document.addEventListener('submit', function(e){
 var f = e.target; if (!f || f.tagName !== 'FORM') return;
 send('lead_form_submit', {form_name: f.getAttribute('name') || f.getAttribute('id') || f.getAttribute('action') || 'form'});
 }, true);
-if (THANKS.test(location.pathname) && !/[?&]noevent/.test(location.search)) send('generate_lead', {});
+/* /thanks is Jotform's thank-you redirect (contact form 222315504420138). Count a lead only on a fresh
+   load arriving from Jotform or from this site, so direct visits, refreshes and back/forward don't count.
+   If Jotform loads /thanks inside the contact page's iframe, move it to the top window first. */
+if (THANKS.test(location.pathname) && !/[?&]noevent/.test(location.search)) {
+if (window.top !== window.self) { try { window.top.location.replace(location.pathname); } catch (x) {} }
+else {
+var r = '', fresh = true; try { r = document.referrer ? new URL(document.referrer).hostname : ''; } catch (x) {}
+try { var nav = performance.getEntriesByType('navigation')[0]; fresh = !nav || nav.type === 'navigate'; } catch (x) {}
+if (fresh && (/jotform/i.test(r) || (r !== '' && r === location.hostname))) send('generate_lead', {form_name: 'jotform_contact', lead_source: /jotform/i.test(r) ? 'jotform' : 'same_site'});
+}
+}
 })();</script>
 </head>
 <body>

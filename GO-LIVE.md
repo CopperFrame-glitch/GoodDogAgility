@@ -333,6 +333,37 @@ Any new page needs the same block, or it won't be counted:
 To check a page is tagged, search it for `G-TG3ZJYLW1J`. To see live traffic,
 open Analytics and go to **Reports → Realtime**.
 
+### Lead tracking (October 2026)
+
+Every page carries a small inline script (just after the Clarity tag, starting
+`<script>(function(){` with `var THANKS = ...`) that sends these GA4 events.
+It is identical on every page; copy it from any page when adding a new one.
+
+- `email_click`, `phone_click` — any `mailto:` / `tel:` link.
+- `cta_click` — a button (`.btn`, `.navcta`, `.tlink`) or ticker / trial-callout link
+  that goes to `/contact`, `/register`, `/trials` or a trial page, plus the waiting-list
+  `mailto:` (subject contains "Waiting list"). Parameters: `cta_label` (link text),
+  `cta_destination` (path, or the mailto), `page_path`.
+- `book_click` — calendar booking links (Google appointments, Calendly). None on the site
+  today.
+- `generate_lead` — fires on **`/thanks`** only.
+
+**Why `/thanks`:** the contact form is a Jotform iframe (form `222315504420138`), so GA4
+can't see the submit. In Jotform, **Settings -> Thank You Page -> Redirect to an external
+link** must be set to `https://gooddog.org/thanks` (the owner is setting this). The
+`thanks.html` page is `noindex,follow` and deliberately **not** in `sitemap.xml`.
+
+`generate_lead` only fires when `/thanks` is a fresh page load (not a refresh or
+back/forward) and the referrer is a jotform host or gooddog.org itself, so typing the
+address in or reloading the page doesn't count a lead. If Jotform opens the redirect
+inside the contact page's iframe, the script moves `/thanks` to the full window first
+and counts it there. Add `?noevent` to the URL to view the page without firing anything.
+
+**Test after the Jotform redirect is set:** submit the contact form once, then check
+Analytics **Reports -> Realtime** for `generate_lead`. Mark `generate_lead` as a key event
+in GA4 (Admin -> Events) so it shows up in conversion reports. If no event appears, Jotform
+may be stripping the referrer; tell whoever maintains the site.
+
 ## Resources section (added September 2026)
 
 `resources.html` is the hub. The volunteer guides (`scribe-instructions.html`,
