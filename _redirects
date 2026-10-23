@@ -1,3 +1,6 @@
+https://www.gooddog.org/* https://gooddog.org/:splat 301!
+# ^ canonical host: www -> apex (added Oct 2026)
+
 # Old Dreamweaver-era URLs -> new pages
 /training.html        /classes.html           301
 /clubinfo.html        /about.html             301
