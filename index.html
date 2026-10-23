@@ -369,6 +369,15 @@ table.equip tr{border-bottom:1px solid var(--rule);padding:.9rem 0}
 table.equip td{border:0!important;padding:0!important}
 table.equip td:first-child{margin-bottom:.3rem}
 }
+/* TRIAL CALLOUT: remove after 2026-11-08 */
+.trialcallout{background:var(--sun);color:var(--ink);border-bottom:3px solid var(--clay)}
+.trialcallout .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem 2rem;padding:1.4rem 28px}
+.trialcallout .tc-kicker{font-weight:900;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);margin:0 0 .2rem}
+.trialcallout .tc-title{font-family:var(--display);font-weight:700;font-size:1.45rem;line-height:1.2;margin:0 0 .25rem}
+.trialcallout .tc-meta{margin:0;font-weight:700}
+.trialcallout .btn-a{background:var(--ink);color:var(--sand)}
+.trialcallout .btn-a:hover{background:var(--terra);color:#fff}
+/* /TRIAL CALLOUT */
 </style>
 <script type="application/ld+json">{
  "@context":"https://schema.org","@type":"SportsOrganization","@id":"https://gooddog.org/#organization",
@@ -410,7 +419,7 @@ if (THANKS.test(location.pathname) && !/[?&]noevent/.test(location.search)) send
 })();</script>
 </head>
 <body>
-<div class="ticker closed"><div class="wrap"><strong>Registration closed</strong><span>Fall 2026 classes are under way and all four levels are full &middot; <a href="register.html">Join the waiting list for February</a></span></div></div>
+<!-- TRIAL CALLOUT: remove after 2026-11-08 (restore the "Registration closed" ticker; see GO-LIVE.md) --><div class="ticker"><div class="wrap"><strong>Trial entries close Oct 28</strong><span>USDAA agility trial, November 7&ndash;8 in Mesa &middot; <a href="trials/2026-11-usdaa-trial-mesa.html">Enter the trial</a> &middot; Fall classes full, <a href="register.html">waiting list open</a></span></div></div><!-- /TRIAL CALLOUT -->
 <nav class="nav"><div class="wrap">
   <a class="brand" href="index.html">
     <img src="images/brand/logo.png" alt="Good Dog Agility Club logo" width="830" height="654">
@@ -425,6 +434,14 @@ if (THANKS.test(location.pathname) && !/[?&]noevent/.test(location.search)) send
 <strong>You're in the right place.</strong> This is the new Good Dog Agility Club website &mdash; same club, same classes, same field in Chandler. We've rebuilt it from scratch, so some older pages haven't made the move yet. If there's something you're looking for and can't find, email <a href="mailto:secretary@gooddog.org">secretary@gooddog.org</a> and we'll get it to you.
 </div></div>
 <main>
+<!-- TRIAL CALLOUT: remove after 2026-11-08 (this block and the .trialcallout CSS in <head>) -->
+<section class="trialcallout" aria-label="Upcoming trial entry deadline"><div class="wrap">
+<div><p class="tc-kicker">Entries close Oct 28</p>
+<p class="tc-title">USDAA Agility Trial, November 2026</p>
+<p class="tc-meta">November 7&ndash;8, 2026 &middot; Ida Redbird Elementary, Mesa, Arizona</p></div>
+<a class="btn btn-a" href="trials/2026-11-usdaa-trial-mesa.html">Details and entry</a>
+</div></section>
+<!-- /TRIAL CALLOUT -->
 <header class="hero split"><div class="wrap">
 <div>
 <p class="eyebrow">USDAA-affiliated since 1993</p>

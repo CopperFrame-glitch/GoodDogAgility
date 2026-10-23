@@ -108,6 +108,24 @@ new lookup is working, then it can be retired.
 
 ---
 
+## Trial callout: November 2026 entries (added October 23, 2026)
+
+Entries for the November 7-8, 2026 trial close **October 28**. Until the trial is over
+the site carries two temporary blocks, each wrapped in
+`<!-- TRIAL CALLOUT: remove after 2026-11-08 ... -->` and `<!-- /TRIAL CALLOUT -->`:
+
+- **`index.html`** — a yellow `<section class="trialcallout">` at the top of `<main>`, plus
+  its `.trialcallout` CSS in the `<style>` block (also between TRIAL CALLOUT comments).
+  Delete both.
+- **Ticker, every page that has one** — reads "Trial entries close Oct 28 / USDAA agility
+  trial, November 7-8 in Mesa / Enter the trial / Fall classes full, waiting list open".
+  After the trial, replace it (comments included) with the closed ticker:
+
+      <div class="ticker closed"><div class="wrap"><strong>Registration closed</strong><span>Fall 2026 classes are under way and all four levels are full &middot; <a href="register.html">Join the waiting list for February</a></span></div></div>
+
+  (on pages in `/trials/` the link is `../register.html`). Search for `TRIAL CALLOUT` to
+  find every block.
+
 ## Registration: closed sitewide (October 3, 2026)
 
 Registration is closed for all four levels and the Jotform has been disabled in the
